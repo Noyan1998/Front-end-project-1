@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: 'Nunito', sans-serif;
+}
+
+h1{
+  text-transform: uppercase;
+  color: darkblue;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  background-color: #7FDBFF;
+  height: 1fr;
+  width: 1fr;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#post{
+  grid-row: 1/2;
+}
+
+#about{
+  grid-row: 2/3;
+}
+
+h2 {
+  color: darkblue;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.date{
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.info, .text_about, a{
+  font-size: 1.5rem;
+  margin: 25px 0;
+}
+
+#image{
+  background-image: url('blog.jpeg');
+  height: 500px;
+  width: 300px;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+@media (min-width: 900px) {
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #post{
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+
+  #about{
+    grid-column: 2/3;
+    grid-row: 1/1;
+  }
+
+  #image{
+    height: 700px;
+    width: 500px;
+    margin-bottom: 10px;
+  }
+}
